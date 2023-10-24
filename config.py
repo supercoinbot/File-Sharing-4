@@ -2,15 +2,15 @@ import os
 import logging
 from logging.handlers import RotatingFileHandler
 
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6335578763:AAE6kcwCTqhZvzzJ-Wi9P2nnDfye4T6CGmg")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
 
-APP_ID = int(os.environ.get("APP_ID", "29984264"))
+APP_ID = int(os.environ.get("APP_ID", ""))
 
-API_HASH = os.environ.get("API_HASH", "446a0cb9435771db57048243476ae517")
+API_HASH = os.environ.get("API_HASH", "")
 
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001724724124"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", ""))
 
-OWNER_ID = int(os.environ.get("OWNER_ID", "1368154988"))
+OWNER_ID = int(os.environ.get("OWNER_ID", ""))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
@@ -23,7 +23,7 @@ except ValueError:
         raise Exception("Ваш список администраторов не содержит допустимых целых чисел.")
 
 ADMINS.append(OWNER_ID)
-ADMINS.append(1368154988)
+ADMINS.append()
 
 LOG_FILE_NAME = "filesharingbot.txt"
 
